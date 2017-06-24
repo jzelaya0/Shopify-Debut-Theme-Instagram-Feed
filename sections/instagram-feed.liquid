@@ -16,7 +16,12 @@
           <p class="text-center">{{ section.settings.subheader}}</p>
         {%- endif -%}
       </div>
-      <div id="InstagramFeed-{{ section.id }}" class="grid {% unless section.settings.padding %}grid--no-gutters{% endunless %}" data-user="{{ section.settings.user_id }}" data-client="{{ section.settings.client_id }}" data-token="{{ section.settings.access_token }}" data-limit="{{ section.settings.limit }}">
+
+      <div id="InstagramFeed-{{ section.id }}" class="grid {% unless section.settings.padding %}grid--no-gutters{% endunless %}"
+           {% if section.settings.user_id != blank %}data-user="{{ section.settings.user_id }}"{% endif %}
+           {% if section.settings.access_token != blank %}data-token="{{ section.settings.access_token }}"{% endif %}
+           {% if section.settings.limit != blank %}data-limit="{{ section.settings.limit }}"{% endif %}
+           >
         <div class="instagram-feed__wrapper"></div>
       </div>
       <script class="instagram-feed__template" type="text/html">
@@ -33,11 +38,6 @@
   "name": "Instagram Feed",
   "class": "index-section",
   "settings": [
-    {
-      "type": "text",
-      "id": "client_id",
-      "label": "Client ID"
-    },
     {
       "type": "text",
       "id": "user_id",
