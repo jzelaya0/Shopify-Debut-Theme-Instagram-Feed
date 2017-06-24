@@ -1,0 +1,19 @@
+#Ignore files
+config.yml
+gulpfile.js
+package.json
+package-lock.json
+theme.update
+
+#Ignore directories
+assets/*
+config/*
+layout/*
+locales/*
+sections/*
+snippets/*
+templates/*
+node_modules/*
+
+#Allow
+!sections/instagram-feed.liquid
