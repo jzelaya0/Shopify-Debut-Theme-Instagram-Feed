@@ -25,7 +25,7 @@
         <div class="instagram-feed__wrapper"></div>
       </div>
       <script class="instagram-feed__template" type="text/html">
-        <div class="instagram-feed__image grid__item small--{{ section.settings.small }} medium-up--{{ section.settings.width_medium }} large-up--{{ section.settings.width_large }}">
+        <div class="instagram-feed__image {% if section.settings.padding %}instagram-feed__image--padded{% endif %} grid__item small--{{ section.settings.width_small }} medium-up--{{ section.settings.width_medium }} large-up--{{ section.settings.width_large }}">
           <a href="{% raw %}{{link}}{% endraw %}" class="instagram-feed__image-link"><img src="{% raw %}{{image}}{% endraw %}" /></a>
         </div>
       </script>
