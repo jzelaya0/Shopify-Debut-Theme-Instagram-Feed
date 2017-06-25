@@ -52,6 +52,11 @@ $grid-breakpoints: (
 // ========================================================================
 // INSTAGRAM FEED STYLES - To be added to assets/theme.scss.liquid
 // ========================================================================
+.instagram-feed__image img {
+  width: 100%;
+  display: block;
+}
+
 .instagram-feed__image--padded {
   margin-bottom: $grid-gutter-mobile;
   @include media-query($medium-up){
