@@ -1,4 +1,4 @@
-#Instagram Feed for Shopify's Debut theme
+# Instagram Feed for Shopify's Debut theme
 
 **Set up**
 
